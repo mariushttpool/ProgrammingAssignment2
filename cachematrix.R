@@ -2,7 +2,6 @@
 ## functions do
 
 ## Write a short comment describing this function
-
 makeCacheMatrix <- function(x = matrix()) {
   a <- NULL
   set <- function(y) {
@@ -19,15 +18,14 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
 cacheSolve <- function(x, ...) {
   a <- x$getinverse()
-  if (!is.null(i)) {
+  if (!is.null(a)) {
     message("getting cached data")
-    return(i)
+    return(a)
   }
   data <- x$get()
   a <- solve(data, ...)
-  x$setinverse(i)
+  x$setinverse(a)
   a
 }
